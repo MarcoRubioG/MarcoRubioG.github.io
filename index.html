@@ -1,11 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Rubio — Dev & Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">MR</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#reconocimientos">Logros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="menu-btn" id="menuBtn">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="hero-tag">Disponible para proyectos</p>
+      <h1 class="hero-name">Marco<br>Rubio</h1>
+      <p class="hero-role">
+        Ing. en Sistemas Computacionales<br>
+        <span>Desarrollo de Software · Apps Móviles · IA & Visión Computacional</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+        <a href="Curriculum.pdf" download class="btn-outline">Descargar CV</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      Scroll <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num" data-count="3">0</div>
+      <div class="stat-label">Proyectos publicados</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="4">0</div>
+      <div class="stat-label">Reconocimientos nacionales</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-count="70">0</div>
+      <div class="stat-label">mil MXN capital semilla</div>
+    </div>
+  </div>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="proyectos">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Proyectos</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-num">001</div>
+        <div class="proj-year">2024</div>
+        <h3 class="proj-title">LumyStella</h3>
+        <p class="proj-desc">Videojuego terapéutico de plataformeo desarrollado con especialistas de salud mental. Implementa respiración 4-4-4-4, EMDR y diario emocional. Reconocimiento nacional en dos ediciones del Innovatec TecNM.</p>
+        <div class="proj-tags">
+          <span class="tag">GDScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Salud Mental</span>
+        </div>
+        <div class="proj-badge">🏆 6° Nacional 2024 · 4° Nacional 2025</div>
+        <div class="proj-arrow">↗</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-num">002</div>
+        <div class="proj-year">2025</div>
+        <h3 class="proj-title">HandSign CV</h3>
+        <p class="proj-desc">Sistema de reconocimiento de lenguaje de señas mediante visión computacional. Detección y seguimiento de manos en tiempo real con interacción automatizada con el SO.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span>
+          <span class="tag">MediaPipe</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">PyAutoGUI</span>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </div>
+
+      <div class="proj-card featured">
+        <div class="proj-num">003</div>
+        <div class="proj-year">2026 — Presente</div>
+        <h3 class="proj-title">Repfys</h3>
+        <p class="proj-desc">App Android de entrenamiento físico publicada en Google Play Store. Calendario de entrenamientos, rutinas personalizadas y seguimiento de progreso. Adoptada como aliado oficial por múltiples gimnasios locales.</p>
+        <div class="proj-tags">
+          <span class="tag">Kotlin</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Android</span>
+          <span class="tag">Google Play</span>
+        </div>
+        <div class="proj-badge live">● En vivo — Google Play Store</div>
+        <div class="proj-arrow">↗</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section" id="habilidades">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Habilidades</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skills-col">
+        <p class="skills-group-title">Lenguajes</p>
+        <div class="skill-row"><span class="skill-name">Python</span><div class="skill-bar-bg"><div class="skill-bar" data-w="90%"></div></div><span class="skill-pct">90%</span></div>
+        <div class="skill-row"><span class="skill-name">Kotlin</span><div class="skill-bar-bg"><div class="skill-bar" data-w="85%"></div></div><span class="skill-pct">85%</span></div>
+        <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar-bg"><div class="skill-bar" data-w="78%"></div></div><span class="skill-pct">78%</span></div>
+        <div class="skill-row"><span class="skill-name">GDScript</span><div class="skill-bar-bg"><div class="skill-bar" data-w="80%"></div></div><span class="skill-pct">80%</span></div>
+        <div class="skill-row"><span class="skill-name">C++ / SQL</span><div class="skill-bar-bg"><div class="skill-bar" data-w="70%"></div></div><span class="skill-pct">70%</span></div>
+      </div>
+      <div class="skills-col">
+        <p class="skills-group-title">Frameworks & Herramientas</p>
+        <div class="tech-grid">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Laravel</span>
+          <span class="tech-pill">TensorFlow</span>
+          <span class="tech-pill">MediaPipe</span>
+          <span class="tech-pill">Pandas</span>
+          <span class="tech-pill">Git</span>
+          <span class="tech-pill">Android Studio</span>
+          <span class="tech-pill">VS Code</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">HTML/CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECONOCIMIENTOS -->
+  <section class="section" id="reconocimientos">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Reconocimientos</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="awards-list">
+
+      <div class="award-card">
+        <div class="award-place">6°</div>
+        <div class="award-info">
+          <h3>Innovatec TecNM — Cumbre Nacional</h3>
+          <p>Industrias Creativas · LumyStella · Colima, México</p>
+        </div>
+        <div class="award-year">2024</div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-place">4°</div>
+        <div class="award-info">
+          <h3>Innovatec TecNM — Cumbre Nacional</h3>
+          <p>Servicios para la Salud Humana · LumyStella · Pachuca, México</p>
+        </div>
+        <div class="award-year">2025</div>
+      </div>
+
+      <div class="award-card highlight">
+        <div class="award-place">2°</div>
+        <div class="award-info">
+          <h3>Emprende por un Cambio Social</h3>
+          <p>Competencia estatal · $70,000 MXN capital semilla · Chihuahua, México</p>
+        </div>
+        <div class="award-year">2025</div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-place">✓</div>
+        <div class="award-info">
+          <h3>Repfys — Aliado Oficial</h3>
+          <p>Adoptada por múltiples gimnasios locales desde su lanzamiento</p>
+        </div>
+        <div class="award-year">2026</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Contacto</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-text">
+        <p class="hero-tag" style="animation:none;opacity:1;">Abierto a oportunidades</p>
+        <h2>Soy nuevo,<br>pero llego <span>con todo.</span></h2>
+        <p>Tengo proyectos reales, reconocimientos nacionales y muchas ganas de crecer. Si buscas a alguien comprometido, curioso y que aprende rápido — hablemos.</p>
+      </div>
+      <div class="contact-links">
+
+        <div class="contact-link" onclick="toggleInfo(this)">
+          <div class="link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <span class="link-label">Correo electrónico</span>
+          <span class="link-arrow">+</span>
+          <div class="link-reveal">
+            <a href="mailto:mrubioofficial@gmail.com" onclick="event.stopPropagation()">mrubioofficial@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-link" onclick="toggleInfo(this)">
+          <div class="link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <span class="link-label">LinkedIn</span>
+          <span class="link-arrow">+</span>
+          <div class="link-reveal">
+            <a href="https://www.linkedin.com/in/marcoestebanrubio" target="_blank" onclick="event.stopPropagation()">Ver perfil →</a>
+          </div>
+        </div>
+
+        <div class="contact-link" onclick="toggleInfo(this)">
+          <div class="link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <span class="link-label">GitHub</span>
+          <span class="link-arrow">+</span>
+          <div class="link-reveal">
+            <a href="https://github.com/MarcoRubioG" target="_blank" onclick="event.stopPropagation()">Ver repositorios →</a>
+          </div>
+        </div>
+
+        <div class="contact-link" onclick="toggleInfo(this)">
+          <div class="link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.971-.971a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <span class="link-label">Teléfono / WhatsApp</span>
+          <span class="link-arrow">+</span>
+          <div class="link-reveal">
+            <a href="https://wa.me/526361311964" target="_blank" onclick="event.stopPropagation()">+52 636-131-1964 →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 — Marco Rubio</p>
+    <p class="footer-mono">Diseñado & Desarrollado por Marco Rubio</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
