@@ -1,4 +1,6 @@
-
+/* ═══════════════════════════════════════
+   CURSOR PERSONALIZADO
+═══════════════════════════════════════ */
 const cursor     = document.createElement('div');
 const cursorRing = document.createElement('div');
 cursor.className     = 'cursor';
@@ -15,7 +17,7 @@ document.addEventListener('mousemove', e => {
   cursor.style.top  = my + 'px';
 });
 
-
+// El ring sigue con retraso suave
 function animateRing() {
   rx += (mx - rx) * 0.13;
   ry += (my - ry) * 0.13;
@@ -25,7 +27,7 @@ function animateRing() {
 }
 animateRing();
 
-
+// Escala al hover sobre links y botones
 document.querySelectorAll('a, button, .proj-card, .tech-pill').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.style.transform     = 'translate(-50%, -50%) scale(2)';
@@ -39,7 +41,9 @@ document.querySelectorAll('a, button, .proj-card, .tech-pill').forEach(el => {
   });
 });
 
-
+/* ═══════════════════════════════════════
+   PARTÍCULAS DE FONDO
+═══════════════════════════════════════ */
 const canvas = document.getElementById('bg-canvas');
 const ctx    = canvas.getContext('2d');
 let W, H, particles = [];
@@ -67,7 +71,7 @@ function createParticles() {
 function drawParticles() {
   ctx.clearRect(0, 0, W, H);
 
-
+  // Líneas de conexión
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x;
@@ -84,7 +88,7 @@ function drawParticles() {
     }
   }
 
-  
+  // Puntos
   particles.forEach(p => {
     p.x += p.vx;
     p.y += p.vy;
@@ -105,7 +109,9 @@ createParticles();
 drawParticles();
 window.addEventListener('resize', () => { resizeCanvas(); createParticles(); });
 
-
+/* ═══════════════════════════════════════
+   REACCIÓN DE PARTÍCULAS AL MOUSE
+═══════════════════════════════════════ */
 document.addEventListener('mousemove', e => {
   particles.forEach(p => {
     const dx   = e.clientX - p.x;
@@ -119,7 +125,9 @@ document.addEventListener('mousemove', e => {
   });
 });
 
-
+/* ═══════════════════════════════════════
+   CONTADOR ANIMADO DE STATS
+═══════════════════════════════════════ */
 function countUp(el, target, suffix = '') {
   let current  = 0;
   const steps  = 60;
@@ -134,7 +142,7 @@ function countUp(el, target, suffix = '') {
   }, 30);
 }
 
-
+// Dispara cuando el stats-bar entra en pantalla
 const statsObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -151,6 +159,9 @@ const statsObserver = new IntersectionObserver(entries => {
 const statsBar = document.querySelector('.stats-bar');
 if (statsBar) statsObserver.observe(statsBar);
 
+/* ═══════════════════════════════════════
+   BARRAS DE HABILIDADES AL SCROLL
+═══════════════════════════════════════ */
 const skillObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -167,7 +178,9 @@ const skillObserver = new IntersectionObserver(entries => {
 const skillsSection = document.querySelector('#habilidades');
 if (skillsSection) skillObserver.observe(skillsSection);
 
-
+/* ═══════════════════════════════════════
+   ANIMACIÓN REVEAL AL SCROLL
+═══════════════════════════════════════ */
 const revealElements = document.querySelectorAll(
   '.proj-card, .award-card, .stat, .contact-link, .tech-pill, .skill-row'
 );
@@ -187,7 +200,9 @@ const revealObserver = new IntersectionObserver(entries => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-
+/* ═══════════════════════════════════════
+   NAV ACTIVO AL HACER SCROLL
+═══════════════════════════════════════ */
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -205,6 +220,7 @@ window.addEventListener('scroll', () => {
     }
   });
 
+  // Nav sombra al hacer scroll
   const nav = document.querySelector('nav');
   if (window.scrollY > 50) {
     nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
@@ -248,13 +264,6 @@ if (heroName) {
   }, 4000);
 }
 
-/* TOGGLE CONTACTO */
-function toggleInfo(btn) {
-  const card = btn.closest('.contact-link');
-  const isOpen = card.classList.contains('open');
-  document.querySelectorAll('.contact-link').forEach(c => c.classList.remove('open'));
-  if (!isOpen) card.classList.add('open');
-}
 /* ═══════════════════════════════════════
    TÍTULO DE PESTAÑA DINÁMICO
 ═══════════════════════════════════════ */
