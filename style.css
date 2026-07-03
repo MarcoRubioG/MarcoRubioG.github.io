@@ -30,9 +30,6 @@ body {
   cursor: none;
 }
 
-/* ═══════════════════════════════════════
-   CURSOR PERSONALIZADO
-═══════════════════════════════════════ */
 .cursor {
   position: fixed;
   width: 10px; height: 10px;
@@ -56,9 +53,6 @@ body {
 }
 body:hover .cursor { opacity: 1; }
 
-/* ═══════════════════════════════════════
-   CANVAS FONDO
-═══════════════════════════════════════ */
 #bg-canvas {
   position: fixed;
   top: 0; left: 0;
@@ -67,9 +61,6 @@ body:hover .cursor { opacity: 1; }
   z-index: 0;
 }
 
-/* ═══════════════════════════════════════
-   NAV
-═══════════════════════════════════════ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -120,9 +111,6 @@ nav {
   cursor: pointer;
 }
 
-/* ═══════════════════════════════════════
-   HERO
-═══════════════════════════════════════ */
 .hero {
   position: relative;
   z-index: 1;
@@ -249,9 +237,6 @@ nav {
   50%      { opacity: 1; }
 }
 
-/* ═══════════════════════════════════════
-   STATS BAR
-═══════════════════════════════════════ */
 .stats-bar {
   position: relative;
   z-index: 1;
@@ -281,9 +266,6 @@ nav {
   margin-top: 0.5rem;
 }
 
-/* ═══════════════════════════════════════
-   SECCIONES GENERALES
-═══════════════════════════════════════ */
 .section {
   position: relative;
   z-index: 1;
@@ -312,9 +294,6 @@ nav {
   background: linear-gradient(to right, var(--purple-dim), transparent);
 }
 
-/* ═══════════════════════════════════════
-   PROYECTOS
-═══════════════════════════════════════ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -328,6 +307,9 @@ nav {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 .proj-card::before {
   content: '';
@@ -411,9 +393,6 @@ nav {
   color: var(--purple-light);
 }
 
-/* ═══════════════════════════════════════
-   HABILIDADES
-═══════════════════════════════════════ */
 .skills-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -489,9 +468,6 @@ nav {
   background: rgba(124,58,237,0.08);
 }
 
-/* ═══════════════════════════════════════
-   RECONOCIMIENTOS
-═══════════════════════════════════════ */
 .awards-list {
   display: flex;
   flex-direction: column;
@@ -507,6 +483,8 @@ nav {
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
 .award-card::before {
   content: '';
@@ -549,9 +527,6 @@ nav {
   letter-spacing: 0.1em;
 }
 
-/* ═══════════════════════════════════════
-   CONTACTO
-═══════════════════════════════════════ */
 .contact-wrap {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -631,9 +606,6 @@ nav {
 }
 .contact-link:hover .link-arrow { transform: translateX(4px); }
 
-/* ═══════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════ */
 footer {
   position: relative;
   z-index: 1;
@@ -649,9 +621,6 @@ footer p {
 }
 .footer-mono { font-family: var(--font-mono); }
 
-/* ═══════════════════════════════════════
-   ANIMACIONES
-═══════════════════════════════════════ */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -665,7 +634,6 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
-/* CONTACTO — REVEAL AL CLICK */
 .link-reveal {
   display: none;
   position: absolute;
@@ -688,9 +656,6 @@ footer p {
 .contact-link.open .link-reveal { display: block; }
 .contact-link.open .link-arrow { transform: rotate(45deg); color: var(--purple-light); }
 
-/* ═══════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════ */
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: flex; }
